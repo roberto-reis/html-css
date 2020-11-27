@@ -463,6 +463,9 @@ header {
 .section-happyClients--info img {
     margin-bottom: 15px;
 }
+.section-happyClients--info p {
+    line-height: 20px;
+}
 .section-happyClients-area .sliders-pointers {
     margin-top: 30px;
     height: 20px;
@@ -480,5 +483,93 @@ header {
     cursor: pointer;
 }
 .section-happyClients-area .pointer.active {
+    background-color: #b28756;
+}
+
+/*
+    Section Empresas
+*/
+.section-empresa{
+    text-shadow: 0px 5px 10px #333;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+.section-empresa-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+/*
+    Section Price
+*/
+.bg-price {
+    background-color: #eeeeee;
+}
+.section-price-area {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section-price .sliders {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.section-price .slide {
+    width: 280px;
+    height: 100%;
+    min-height: 300px;
+    background-color: #fff;
+    margin-right: 20px;
+}
+
+.section-price .slidearea {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: #000;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+
+}
+.section-price .section-price--cat {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.section-price .section-price--valor {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.section-price .section-price--valor ~ span{
+    color: #acacac;
+    margin-bottom: 20px;
+}
+.section-price .section-price--info {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+
+}
+.section-price .section-price--info span {
+    margin-bottom: 12px;
+    display: block;
+}
+.section-price .section-price--info div {
+    width: 15px;
+    height: 1px;
+    background-color: #666;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.section-price-area .button {
+    background-color: #444;
+}
+.section-price-area .button.active {
     background-color: #b28756;
 }
