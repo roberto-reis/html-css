@@ -66,6 +66,9 @@ header {
     border-bottom: 5px solid #b28756;
     color: #ccc;
 }
+.menu-opener {
+    display: none;
+}
 
 .button {
     display: inline-block;
@@ -231,13 +234,13 @@ header {
 
 .section-services {
     display: flex;
-    text-align: center;
+    flex-wrap: wrap;
 }
 
 .section-service {
-    flex: 1;
     border-right: 1px solid #ccc;
     padding: 15px;
+    text-align: center;
 }
 
 .section-service:first-child {
@@ -275,9 +278,10 @@ header {
 
 .section-projects--filters ul {
     list-style: none;
-    display: flex;
 }
-
+.section-projects--filters li {
+    display: inline-flex;
+}
 .section-projects--filters li a {
     display: block;
     padding: 10px;
@@ -485,7 +489,6 @@ header {
     height: 100%;
     color: #000;
     align-items: center;
-    justify-content: center;
 }
 
 .section-happyClients--avatar {
@@ -563,14 +566,8 @@ header {
 /*
     Section Price
 */
-
 .bg-price {
     background-color: #eeeeee;
-}
-
-.section-price-area {
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 .section-price .sliders {
@@ -676,7 +673,6 @@ header {
 }
 
 .section-premium-area .section-premium--img {
-    width: 100%;
     max-width: 570px;
     text-align: center;
 }
@@ -748,10 +744,9 @@ header {
 */
 .section-some-facts {
     display: flex;
-    text-align: center;
 }
 .section-service-card {
-    flex: 1;
+    text-align: center;
     padding: 30px;
 }
 .section-service-card h4 {
@@ -791,6 +786,10 @@ header {
     align-items: center;
     padding: 25px;
     border-bottom: 1px solid #d8d8d8;
+}
+.section-tell-aboutUs--share {
+    display: flex;
+    flex-wrap: wrap;
 }
 .section-tell-aboutUs .tell-aboutUs--title {
     display: flex;
@@ -1000,3 +999,291 @@ footer {
     font-size: 16px;
     outline: none;
 }
+
+/* Responsividade Tablet*/
+@media (min-width: 450px) and (max-width: 800px) {
+    .menu-opener {
+        width: 45px;
+        margin-right: 30px;
+        display: block;
+    }
+    .menu nav {
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, .9);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+        display: none;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu ul a {
+        font-weight: bold;
+        height: 80px;
+        font-size: 27px;
+        margin-left: 50px;
+        border: 0;
+    }
+    .menu ul li.active a {
+        color: #b28756;
+        border: 0;
+    }
+    .logo {
+        margin-left: 30px;
+    }
+
+    .section-aboutus {
+        flex-direction: column;
+    }
+    .section-aboutus--left {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    .section-aboutus--right {
+        width: auto;
+    }
+    .section-service {
+        min-width: 50%;
+        margin-bottom: 30px;
+    }
+    .section-service:first-child {
+        border-left: 0;
+    }
+
+    .section-team {
+        max-width: 580px;
+    }
+
+    .section-map {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .section-map--area {
+        width: auto;
+    }
+    .section-map--info {
+        width: auto;
+    }
+    .section-map--info-item {
+        margin-bottom: 20px;
+    }
+    .section-map--info-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .section-empresa-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section-empresa-logos--item {
+        padding: 10px;
+    }
+
+    .section-price .sliders {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .section-price .sliders .slide {
+        margin-bottom: 20px;
+    }
+
+    .section-premium-area .slide {
+        max-width: 768px;
+    }
+    .section-premium-area .slidearea {
+        flex-direction: column;
+    }
+    .section-premium-area .section-premium--img {
+        margin-bottom: 20px;
+    }
+    .section-premium-area .section-premium--produto {
+        margin-bottom: 20px;
+    }
+
+    .section-some-facts {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section-some-facts .section-service-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Responsividade Mobile*/
+@media (max-width: 450px) {
+    .menu-opener {
+        width: 45px;
+        margin-right: 30px;
+        display: block;
+    }
+    .menu nav {
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, .9);
+        width: 80vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+        display: none;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu ul a {
+        font-weight: bold;
+        height: 60px;
+        font-size: 20px;
+        margin-left: 30px;
+        border: 0;
+    }
+    .menu ul li.active a {
+        color: #b28756;
+        border: 0;
+    }
+    .logo {
+        margin-left: 30px;
+    }
+
+    .banner .slidearea h2 {
+        font-size: 30px;
+    }
+    .banner .slidearea h3 {
+        font-size: 17px;
+    }
+
+    .section-aboutus {
+        flex-direction: column;
+    }
+    .section-aboutus--left {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    .section-aboutus--right {
+        width: auto;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .section-aboutus--right img {
+        width: 80%;
+    }
+    .section-service {
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
+    .section-service:first-child {
+        border-left: 0;
+    }
+
+    .section-projects--filters {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .section-projects--photo {
+        width: 320px;
+    }
+    .section-projects--photoarea {
+        width: 300px;
+        height: 190px;
+    }
+
+    .section-team {
+        max-width: 280px;
+    }
+
+    .section-happyClients-area .slide {
+        width: 320px;
+        margin-left: 20px;
+    }
+
+    .section-price .slide {
+        margin-right: 0;
+    }
+
+    .section-price .sliders {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .section-price .sliders .slide {
+        margin-bottom: 20px;
+    }
+
+    .section-premium-area .slide {
+        max-width: 400px;
+    }
+    .section-premium-area .slidearea {
+        flex-direction: column;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .section-premium-area .section-premium--img {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .section-premium-area .section-premium--img img {
+        width: 100%;
+    }
+    .section-premium-area .section-premium--produto {
+        margin-bottom: 20px;
+    }
+
+    .section-some-facts {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section-some-facts .section-service-card {
+        width: 100%;
+        max-width: 350px;
+    }
+    .section-tell-aboutUs {
+        flex-direction: column;
+    }
+    .section-tell-aboutUs .tell-aboutUs--title {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .section-tell-aboutUs .section-share--item {
+        width: 60px;
+        margin-bottom: 10px;
+    }
+
+    .section-contact-form {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .section-contact-form .form-group-row {
+        flex-direction: column;
+    }
+
+    .section-map {
+        padding: 0;
+        padding-bottom: 250px;
+    }
+    .section-map--area {
+        width: auto;
+    }
+    .section-map--info {
+        width: auto;
+    }
+    .section-map--info-item {
+        margin-bottom: 20px;
+    }
+    .section-map--info-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .section-empresa-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section-empresa-logos--item {
+        padding: 10px;
+    }
+} 
